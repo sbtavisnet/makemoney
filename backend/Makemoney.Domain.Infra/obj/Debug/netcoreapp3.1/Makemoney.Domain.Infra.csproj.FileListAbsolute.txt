@@ -1,0 +1,14 @@
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netcoreapp3.1\Makemoney.Domain.Infra.deps.json
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netcoreapp3.1\Makemoney.Domain.Infra.dll
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netcoreapp3.1\Makemoney.Domain.Infra.pdb
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netcoreapp3.1\Makemoney.Domain.dll
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netcoreapp3.1\Makemoney.Domain.Shared.dll
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netcoreapp3.1\Makemoney.Domain.pdb
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netcoreapp3.1\Makemoney.Domain.Shared.pdb
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netcoreapp3.1\Makemoney.Domain.Infra.csprojAssemblyReference.cache
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netcoreapp3.1\Makemoney.Domain.Infra.AssemblyInfoInputs.cache
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netcoreapp3.1\Makemoney.Domain.Infra.AssemblyInfo.cs
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netcoreapp3.1\Makemoney.Domain.Infra.csproj.CoreCompileInputs.cache
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netcoreapp3.1\Makemoney.Domain.Infra.csproj.CopyComplete
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netcoreapp3.1\Makemoney.Domain.Infra.dll
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netcoreapp3.1\Makemoney.Domain.Infra.pdb

@@ -1,0 +1,87 @@
+<ion-content>
+    <form #templateForm="ngForm">
+        <div>
+            <ion-item>
+                <ion-label position="floating">Cep*</ion-label>
+                <ion-input type="text" maxlength="9" name="cepcli" id="cepcli" [(ngModel)]="modelCliente.cepcli" required readonly="{{ inputReadOnly}}">
+                </ion-input>
+                <ion-button fill="clear" expand="full" slot="end" (click)="getCep(modelCliente.cepcli)">
+                    Busca Cep
+                </ion-button>
+
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Endereço*</ion-label>
+                <ion-input type="text" name="endcli" id="endcli" [(ngModel)]="modelCliente.endcli" required readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Número*</ion-label>
+                <ion-input type="text" name="numendcli" id="numendcli" [(ngModel)]="modelCliente.numendcli" required readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Complemento</ion-label>
+                <ion-input type="text" name="complemento" id="complemento" [(ngModel)]="modelCliente.complemento" readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+
+
+            <ion-item>
+                <ion-label position="floating">Bairro*</ion-label>
+                <ion-input type="text" name="baiendcli" id="baiendcli" [(ngModel)]="modelCliente.baiendcli" required readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Cidade*</ion-label>
+                <ion-input type="text" name="cidcli" id="cidcli" [(ngModel)]="modelCliente.cidcli" required readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">UF*</ion-label>
+                <ion-input type="text" maxlength="2" name="ufcli" id="ufcli" [(ngModel)]="modelCliente.ufcli" required readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Celular*</ion-label>
+                <ion-input type="text" name="celular" id="celular" [(ngModel)]="modelCliente.celular" required readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">E-mail</ion-label>
+                <ion-input type="text" name="mailcli" id="mailcli" [(ngModel)]="modelCliente.mailcli" readonly="{{ inputReadOnly}}">
+                </ion-input>
+            </ion-item>
+        </div>
+
+    </form>
+
+    <ion-card>
+        <!-- <ion-row>
+            <ion-col text-center>
+                <ion-button shape="round" expand="full" fill="outline" [disabled]="!templateForm.valid" (click)="saveEndereco(modelCliente)">
+                    Confirmar
+                </ion-button>
+
+            </ion-col>
+        </ion-row> -->
+
+        <ion-row>
+            <ion-col text-center>
+                <ion-button shape="round" expand="full" fill="outline" (click)="voltar()">
+                    Voltar
+                </ion-button>
+
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+</ion-content>

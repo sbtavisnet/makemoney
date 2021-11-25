@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar color="primary">
+
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+        <ion-title class="ion-text-center">
+            Detalhe do Produto
+        </ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+    <form>
+        <ion-card *ngFor="let item of modelProduto" no-lines>
+            <ion-card-content>
+                <ion-item>
+                    <app-produto-imagem imagem={{item?.imageurl}}></app-produto-imagem>
+
+                    <ion-grid style="margin-left: 10%;">
+
+                        <ion-item lines=" none ">
+                            <ion-label> {{ item?.codpro }} </ion-label>
+                        </ion-item>
+                        <ion-item lines="none ">
+                            <ion-label class="ion-text-wrap "> {{ item?.despro }} </ion-label>
+                        </ion-item>
+                        <ion-item lines="none ">
+                            <ion-label>
+                                {{ item?.venda | currency:'R$ '}} {{ item?.coduni }}
+                            </ion-label>
+                        </ion-item>
+
+                        <ion-button size="small " shape="round " fill="outline " (click)="addToCart(modelProduto) ">
+                            <ion-icon slot="start " name="cart "></ion-icon>
+                            Adicionar ao Carrinho
+                        </ion-button>
+
+
+                    </ion-grid>
+                </ion-item>
+
+            </ion-card-content>
+        </ion-card>
+    </form>
+</ion-content>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vR7pNWONGDm8XHf7PfoRSZX4ngYQpYk5uUyHFEKMFJGj0VdIo6M9NjgZAP1pMq/Y7Pnwvnu8InfMCbSMdZHIdw==",
+  "success": true,
+  "projectFilePath": "D:\\dev\\makemoney\\backend\\Makemoney.Dominio.Shared\\Makemoney.Domain.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SBT\\.nuget\\packages\\flunt\\1.0.4\\flunt.1.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

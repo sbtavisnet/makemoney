@@ -1,0 +1,81 @@
+<ion-header>
+    <app-toobar titulo="Endereço de Entrega" class="ion-text-center"></app-toobar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+        <form [formGroup]="frmEndereco">
+            <div>
+
+                <ion-item>
+                    <ion-label position="floating">Cep*</ion-label>
+                    <ion-input type="text" maxlength="9" formControlName="cep" name="cep" id="cep">
+                    </ion-input>
+                    <ion-button fill="clear" expand="full" slot="end" (click)="getCep(modelCliente.cepcli)">
+                        Busca Cep
+                    </ion-button>
+
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Endereço*</ion-label>
+                    <ion-input type="text" formControlName="endereco" name="endereco" id="endereco">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Número*</ion-label>
+                    <ion-input type="text" formControlName="numero" name="numero" id="numero">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Complemento</ion-label>
+                    <ion-input type="text" formControlName="complemento" name="complemento" id="complemento">
+                    </ion-input>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="floating">Bairro*</ion-label>
+                    <ion-input type="text" formControlName="bairro" name="bairro" id="bairro">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Cidade*</ion-label>
+                    <ion-input type="text" formControlName="cidade" name="cidade" id="cidade">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">UF*</ion-label>
+                    <ion-input type="text" maxlength="2" formControlName="uf" name="uf" id="uf">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Celular*</ion-label>
+                    <ion-input type="text" formControlName="celular" name="celuar" id="celular">
+                    </ion-input>
+                </ion-item>
+            </div>
+
+        </form>
+    </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+    <ion-card>
+        <ion-row class="button-center">
+            <ion-button shape="round" expand="full" fill="outline" [disabled]="frmEndereco.invalid" (click)="showPedidoFinalizar()">
+                Pagamento
+            </ion-button>
+
+        </ion-row>
+
+    </ion-card>
+
+</ion-footer>

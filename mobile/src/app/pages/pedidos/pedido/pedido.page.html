@@ -1,0 +1,58 @@
+<ion-header>
+    <app-toobar titulo="Pedido" class="ion-text-center"></app-toobar>
+</ion-header>
+
+
+<ion-content class="ion-text-center">
+
+    <ion-grid style="margin-left: 5%; margin-top: 10%;">
+        <ion-row>
+            <!-- <app-produto-imagem imagem={{dadosProduto?.IMAGEURL}}></app-produto-imagem> -->
+            <ion-img class="image" src=" {{ dadosProduto?.imageurl }} "></ion-img>
+        </ion-row>
+
+        <ion-item-divider> </ion-item-divider>
+
+        <ion-row justify-content-center align-items-center>
+            <ion-label> {{ dadosProduto?.codpro }} </ion-label>
+        </ion-row>
+
+        <ion-row justify-content-center align-items-center>
+            <ion-label> {{ dadosProduto?.despro }} </ion-label>
+        </ion-row>
+
+        <ion-row></ion-row>
+        <ion-row justify-content-center align-items-center>
+            <ion-label>{{ dadosProduto?.coduni }} </ion-label>
+        </ion-row>
+
+        <ion-item-divider> </ion-item-divider>
+
+        <ion-row class="ion-text-center">
+            <ion-col>
+                <ion-label style="font-size: 20px; opacity: 0.5;"> A partir de </ion-label>
+            </ion-col>
+
+            <ion-col>
+                <ion-label style="font-size: 20px; opacity: 0.5;">
+                    {{ dadosProduto?.venda | currency: 'R$ ' }}
+                </ion-label>
+            </ion-col>
+
+            <ion-col>
+                <ion-button shape="round" fill="outline" (click)="showFormulario(dadosProduto)">
+                    <ion-icon name="cart"></ion-icon>
+                </ion-button>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-item-divider> </ion-item-divider>
+        <ion-row>
+            <ion-label style="font-size: 15px;"> {{ dadosProduto?.informacaotecnica }} </ion-label>
+        </ion-row>
+
+    </ion-grid>
+
+
+</ion-content>

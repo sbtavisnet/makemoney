@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            Itens do Pedido
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-content">
+    <ion-list>
+        <ion-card *ngFor="let item of dadosPedidoItens">
+            <ion-card-header>
+                <ion-card-subtitle class="ion-text-wrap">
+                    {{ item.codpro}} {{ item.despro}}
+                </ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+                <h3 *ngIf="item.desconto1==0">
+                    {{ item.quant }} x {{ item.preco | number:'2.2' }} = {{ soma(item) | number:'2.2' }}
+                </h3>
+                <h3 *ngIf="item.desconto1>0">
+                    {{ item.quant }} x {{ item.preco | number: '2.2' }} - {{ item.desconto1 | number:'2.2' }} = {{ soma(item) | number: '2.2' }}
+                </h3>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>

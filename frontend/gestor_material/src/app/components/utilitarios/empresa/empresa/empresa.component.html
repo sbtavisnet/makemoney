@@ -1,0 +1,218 @@
+<form [formGroup]="frmEmpresa" novalidate (ngSubmit)="onSubmit(frmEmpresa.value)">
+    <mat-card class="shipping-card">
+
+        <mat-card-header>
+            <mat-card-title>Dados da Empresa</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <div class="row">
+                <div class="col">
+                    <!-- <mat-form-field [hidden]="true">
+                        <input matInput formControlName="id">
+                    </mat-form-field> -->
+
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Razão Social*</mat-label>
+                        <input matInput placeholder="Razão Social" formControlName="razao">
+                        <mat-error *ngIf="frmEmpresa.controls['razao'].hasError('required')">
+                            Razão Social <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Fantasia*</mat-label>
+                        <input matInput placeholder="Fantasia" formControlName="fantasia">
+
+                        <mat-error *ngIf="frmEmpresa.controls['fantasia'].hasError('required')">
+                            Nome Fantasia <strong>Obrigatório</strong>
+
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>CNPJ*</mat-label>
+                        <input matInput placeholder="CNPJ" formControlName="cnpj" maxlength="14">
+                        <mat-error *ngIf="frmEmpresa.controls['cnpj'].hasError('required')">
+                            CNPJ <strong>Obrigatório</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Inscrição Estadual*</mat-label>
+                        <input matInput placeholder="Inscriçao Estadual" formControlName="ie" maxlength="14">
+                        <mat-error *ngIf="frmEmpresa.controls['ie'].hasError('required')">
+                            Inscrição Estadual <strong>Obrigatório</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-1">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>CEP*</mat-label>
+                        <input (ngModelChange)="getCep($event)" formControlName="cep" matInput placeholder="CEP" minlength="8" maxlength="8">
+                        <mat-error *ngIf="frmEmpresa.controls['cep'].hasError('required')">
+                            CEP <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Endereço*</mat-label>
+                        <input matInput placeholder="Rua, Av e etc" formControlName="endereco">
+                        <mat-error *ngIf="frmEmpresa.controls['endereco'].hasError('required')">
+                            Endereço <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-1">
+                    <mat-form-field appearance="legacy" class="full-width" style="width: 40%;">
+                        <mat-label>Número*</mat-label>
+                        <input matInput placeholder="Número" formControlName="numero">
+                        <mat-error *ngIf="frmEmpresa.controls['numero'].hasError('required')">
+                            Número <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Complemento</mat-label>
+                        <input matInput placeholder="Complemento" formControlName="complemento">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Bairro*</mat-label>
+                        <input matInput placeholder="Bairro" formControlName="bairro">
+                        <mat-error *ngIf="frmEmpresa.controls['bairro'].hasError('required')">
+                            Bairro <strong>Obrigatório</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Cidade*</mat-label>
+                        <input matInput placeholder="Cidade" formControlName="cidade">
+                        <mat-error *ngIf="frmEmpresa.controls['cidade'].hasError('required')">
+                            Cidade <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-1">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Estado*</mat-label>
+                        <input matInput placeholder="Estado" formControlName="uf">
+                        <mat-error *ngIf="frmEmpresa.controls['uf'].hasError('required')">
+                            Estado <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>E-mail</mat-label>
+                        <input type="email" matInput placeholder="Ex. avisnet@avisnet.com.br" formControlName="email">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-2">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Telefone*</mat-label>
+                        <input type="tel" matInput placeholder="Ex. (33)-3212800" formControlName="fone">
+                        <mat-error *ngIf="frmEmpresa.controls['fone'].hasError('required')">
+                            Telefone <strong>Obrigatório</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>IBGE*</mat-label>
+                        <input matInput placeholder="Código do IBGE" formControlName="codigoibge">
+                        <mat-error *ngIf="frmEmpresa.controls['codigoibge'].hasError('required')">
+                            IBGE <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Ramo Atividade*</mat-label>
+                        <input type="number" matInput placeholder="Ramo de Atividade" formControlName="ramoatividade">
+                        <mat-error *ngIf="frmEmpresa.controls['ramoatividade'].hasError('required')">
+                            Ramo de atividade <strong>Obrigatório</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="col">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Regime</mat-label>
+                        <mat-select formControlName="regime">
+                            <mat-option *ngFor="let regimetributario of regimeTributario" [value]="regimetributario.id">
+                                {{regimetributario.descricao}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
+                </div>
+
+
+
+
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Ativo*</mat-label>
+                        <input type="text" matInput placeholder="Ativo (S/N)" formControlName="ativo" maxlength="1">
+                        <mat-error *ngIf="frmEmpresa.controls['ativo'].hasError('required')">
+                            Ativo <strong>Obrigatório</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" [disabled]="frmEmpresa.invalid">Enviar</button>
+        </mat-card-actions>
+
+    </mat-card>
+
+    <!-- <div>{{ frmEmpresa.value | json}}</div>
+     -->
+</form>

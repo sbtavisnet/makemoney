@@ -1,0 +1,91 @@
+<!-- <app-headertable [titulo]="titulo" [lista]="listaParsis"></app-headertable> -->
+
+<div id="main" class="container-fluid">
+    <div id="top" class="row">
+        <div class="col-md-3">
+            <h2> {{ titulo }} </h2>
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group mr-2">
+                <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar...">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                </span>
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-3">
+            <a href="add.html" class="btn btn-primary pull-right h2">Novo Item</a>
+        </div>
+
+    </div>
+</div>
+
+<hr />
+
+<div id=" list " class="row ">
+    <div class="table-responsive table-hover col-md-12 table-striped ">
+        <table class="table table-striped " cellspacing="0 " cellpadding="0 ">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col" sortable="id" (sort)="onSort($event)">Id</th>
+                    <th scope="col" sortable="razao" (sort)="onSort($event)">Razão</th>
+                    <th scope="col" sortable="cnpj" (sort)="onSort($event)">CNPJ</th>
+                    <th scope="col" sortable="ativo" (sort)="onSort($event)">Ativo</th>
+                    <th scope="col" class="actions ">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let item of listaParsis ">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.razao }}</td>
+                    <td>{{ item.cnpj }}</td>
+                    <td>{{ item.ativo }}</td>
+
+                    <td class="actions ">
+                        <a class="btn btn-success btn-xs " href="view.html ">Visualizar</a>
+                        <a class="btn btn-warning btn-xs " href="edit.html ">Editar</a>
+                        <a class="btn btn-danger btn-xs " href="# " data-toggle="modal " data-target="#delete-modal ">Excluir</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <!-- /#list -->
+
+    <!-- <div id="bottom " class="row ">
+            <div class="col-md-12 ">
+
+                <ul class="pagination ">
+                    <li class="disabled mr-lg-1 "><a href="# ">&lt; Anterior</a></li>
+                    <li class="disabled mr-lg-1 "><a href="# ">>1</a></li>
+                    <li class="disabled mr-lg-1 "><a href="# ">2</a></li>
+                    <li class="disabled mr-lg-1 "><a href="# ">3</a></li>
+                    <li class="next "><a href="# " rel="next ">Próximo &gt;</a></li>
+                </ul>
+                <!-- /.pagination -->
+    <!-- 
+            </div>
+
+        </div> 
+          -->
+    <!-- /#bottom -->
+</div>
+<!-- /#main -->
+
+
+
+
+<!-- 
+    le esse artigo
+    https://webdevacademy.com.br/ux/crud-com-bootstrap-3-parte5/ -->

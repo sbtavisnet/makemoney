@@ -1,0 +1,164 @@
+<form [formGroup]="formulario" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card" *ngIf="produtoModel?.id > 0">
+        <mat-tab-group>
+            <mat-tab label="Dados">
+                <h1>Editar Produto</h1>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Descriçao*" formControlName="descricao">
+                                <mat-error *ngIf="formulario.controls['descricao'].hasError('required')">
+                                    Descrição <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Descriçao detalhada do produto" formControlName="descricaotexto">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Unidade*" formControlName="unidade" minlength="2" maxlength="2">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <mat-label> Grupo* </mat-label>
+                                <mat-select 
+                                   formControlName="idGrupo" 
+                                    multiple="false" 
+                                    name="idGrupo" id="idGrupo">
+                                    <mat-option  *ngFor='let grupo of listaGrupo' 
+                                       (click)="getSubGrupo(grupo.id)"
+                                       [value]="grupo.id">
+                                        {{ grupo.codigo }} | {{ grupo.descricao }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <mat-label> SubGrupo* </mat-label>
+                                <mat-select formControlName="idSubGrupo" 
+                                   multiple="false"
+                                   name="idSubGrupo"
+                                   id="idSubGrupo"
+                                   [(ngModel)]="produtoModel.idSubGrupo">
+                                    <mat-option *ngFor='let subgrupo of listaSubGrupo'
+                                        [value]="subgrupo.id">
+                                        {{ subgrupo.codigo }} | {{ subgrupo.descricao }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-tab>
+
+            <mat-tab label="Apresentação">
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Apresentação" formControlName="apresentacao">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Informação técnica" formControlName="informacaotecnica">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-tab>
+
+            <mat-tab label="Preço e Peso">
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Preço" formControlName="precovarejo" type="number">
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Peso Bruto" formControlName="pesobruto" type="number">
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Peso Liquido" formControlName="pesoliquido" type="number">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Altura" formControlName="altura" type="number">
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Largura" formControlName="largura" type="number">
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Profundidade" formControlName="profundidade" type="number">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Fator de venda*" formControlName="fatorvenda" type="number">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col">
+                            <mat-form-field class="full-width">
+                                <input matInput placeholder="Unidade Fator" formControlName="unidadefator" minlength="2" maxlength="2">
+                            </mat-form-field>
+                        </div>
+
+                        
+                      <div class="col">
+                         <mat-label> Ativo </mat-label>
+                         <select matNativeControl required formControlName="ativo">
+                             <option value="S">Sim</option>
+                            <option value="N">Não</option>
+                         </select>
+                      </div>
+            
+                    </div>
+                </mat-card-content>
+            </mat-tab>
+
+        </mat-tab-group>
+    </mat-card>
+
+    <mat-card-actions>
+       <button mat-raised-button color="primary" [disabled]="formulario.invalid" type="submit">Salvar</button>
+        <button mat-raised-button color="warn" (click)="cancelar()">Cancelar</button>
+   </mat-card-actions>
+
+</form>

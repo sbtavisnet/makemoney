@@ -1,0 +1,22 @@
+<ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" (click)="onShow()">
+        <ion-icon name="cart"></ion-icon>
+
+        <div *ngIf="qteItensCarrinho > 0">
+            <ion-badge>
+                {{qteItensCarrinho }}
+            </ion-badge>
+        </div>
+
+
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">
+        {{ titulo }}
+    </ion-title>
+</ion-toolbar>

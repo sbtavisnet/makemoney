@@ -1,0 +1,68 @@
+<ion-app>
+
+    <ion-menu contentId="main" type="overlay" side="start" menuId="first">
+        <ion-header>
+            <ion-toolbar color="primary" (click)="initializeApp()">
+
+                <ion-label style="font-size:12px; margin-left:10px; ">
+                    {{ codcli }} - {{ nomecliente }}
+                </ion-label>
+                <ion-icon name="people-outline" slot="end" style="width: 30px; height:30px;"></ion-icon>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-list>
+                <ion-menu-toggle auto-hide="false">
+                    <ion-item (click)="openPage('/home')" menuClose>
+                        <ion-icon name="home"> </ion-icon>
+                        <p class="menu-margem-left"> Home</p>
+                    </ion-item>
+
+                    <ion-item (click)="openPage('/minha-compra')" menuClose>
+                        <ion-icon name="cart"> </ion-icon>
+                        <p class="menu-margem-left">Minhas Compras</p>
+
+                    </ion-item>
+
+                    <ion-item (click)="openPage('/titulos')" menuClose>
+                        <ion-icon name="document-text"></ion-icon>
+                        <p class="menu-margem-left">Títulos em Aberto</p>
+
+                    </ion-item>
+
+                    <ion-item (click)="openPage('/grupos')" menuClose>
+                        <ion-icon name="card"> </ion-icon>
+                        <p class="menu-margem-left">Categorias</p>
+
+                    </ion-item>
+
+                    <ion-item (click)="openPage('/produto')" menuClose>
+                        <ion-icon name="barcode"> </ion-icon>
+                        <p class="menu-margem-left">Produtos</p>
+
+                    </ion-item>
+
+                    <ion-item (click)="openPage('/utilitarios')" menuClose>
+                        <ion-icon name="settings-outline"></ion-icon>
+                        <p class="menu-margem-left"> Ferrmentas</p>
+                    </ion-item>
+
+
+                    <ion-item (click)="openPage( '/about') " menuClose>
+                        <ion-icon name="help-circle"> </ion-icon>
+                        <p class="menu-margem-left"> Ajuda </p>
+                    </ion-item>
+                </ion-menu-toggle>
+            </ion-list>
+        </ion-content>
+
+        <!-- rodape -->
+        <app-rodape></app-rodape>
+
+    </ion-menu>
+
+    <ion-router-outlet id=main></ion-router-outlet>
+
+
+</ion-app>

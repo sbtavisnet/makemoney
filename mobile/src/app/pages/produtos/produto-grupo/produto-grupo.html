@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end" routerLink="/carrinho">
+            <ion-icon name="cart"></ion-icon>
+            <ion-badge *ngIf="qteItensCarrinho > 0">
+                {{qteItensCarrinho }}
+            </ion-badge>
+        </ion-buttons>
+
+
+        <ion-title class="ion-text-center">
+            {{ modelSubGrupo.descricao?.substring(0,30) }}
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-searchbar (ionInput)="filtrar($event)" placeholder="Descrição do produto..."></ion-searchbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let item of listaFilter" col-12 col-md-6 col-lg-4 col-xl-3>
+                <ion-card class="ion-card-configurado">
+                    <ion-card-content>
+                        <ion-row>
+                            <ion-img class="image" src=" {{ item?.imageurl }} ">
+                            </ion-img>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-label> {{ item.codpro }} </ion-label>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-label> {{ item.despro.substring(0,30) }} </ion-label>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-label>
+                                {{ item.venda | currency:'R$ '}} {{ item.coduni }}
+                            </ion-label>
+                        </ion-row>
+
+                        <!-- 
+                        <ion-row class="ion-text-lg-center">
+                            <ion-col class="right-center">
+                                <ion-button shape="round" fill="outline" (click)="showPedidoItem(item)" float>
+                                    <ion-icon name="cart"></ion-icon>
+                                </ion-button>
+                            </ion-col>
+                        </ion-row> -->
+
+                    </ion-card-content>
+
+                    <ion-footer class="ion-no-border">
+                        <ion-row>
+                            <ion-col>
+                                <ion-button shape="round" fill="outline" (click)="showPedidoItem(item)" float>
+                                    <ion-icon name="cart"></ion-icon>
+                                    <strong>Comprar</strong>
+                                </ion-button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-footer>
+
+                </ion-card>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-infinite-scroll (ionInfinite)="popularInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

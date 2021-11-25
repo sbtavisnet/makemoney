@@ -1,0 +1,196 @@
+<ion-header>
+    <ion-toolbar color="primary" text-center>
+        <ion-title *ngIf="logar" class="ion-text-center"> Acessar </ion-title>
+        <ion-title *ngIf="registrar" class="ion-text-center"> Cadastre sua senha </ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="loginPage" scroll="true">
+    <ion-grid style="height: 100%;">
+        <ion-row class="justify-content-center align-items-center" style="height: 100%">
+
+            <ion-grid class="login-container">
+                <ion-row class="align-items-center">
+                    <ion-col>
+                        <!-- <img src="../../assets/img/logo.png" style="height: 200px; width: 200px; display: block; margin:auto; margin-top:-60px" class="ion-padding"> -->
+                        <img src="../../assets/img/logo.png" class="ion-padding logo">
+                    </ion-col>
+                </ion-row>
+
+                <div *ngIf="logar">
+                    <!-- Login form -->
+                    <form [formGroup]="frmLogin">
+                        <ion-row align-items-center>
+                            <ion-col>
+                                <ion-item>
+                                    <ion-label position="floating ">
+                                        <ion-icon name="md-contact " item-start class="text-primary "></ion-icon>
+                                        CNPJ ou CPF
+                                    </ion-label>
+                                    <ion-input type="text" maxlength="14" formControlName="cnpjcpf" name="cnpjcpf" id="cnpjcpf">
+                                    </ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label position="floating ">
+                                        <ion-icon name="lock" item-start class="text-primary "></ion-icon>
+                                        Senha
+                                    </ion-label>
+                                    <ion-input type="password" formControlName="senha" maxlength="6" name="senha" id="senha">
+                                    </ion-input>
+                                </ion-item>
+                            </ion-col>
+
+                        </ion-row>
+
+                        <ion-row>
+                            <p text-right ion-text tappable (click)="esqueceuSenha() ">
+                                <strong style="text-decoration: underline; margin-left: 20px; "> Esqueceu a
+                                    senha?</strong>
+                            </p>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-button class="button-center-login" fill="outline" expand="block " shape="round" [disabled]="frmLogin.invalid" (click)="login()">
+                                <ion-icon name="log-in"></ion-icon>
+                                Acessar
+                            </ion-button>
+                        </ion-row>
+
+                        <!-- Other links -->
+                        <ion-row>
+                            <p text-center margin-top>
+                                <span color="primary " style="margin-left: 20px; " tappable (click)="exibirRegistrar() ">Registrar ?
+                                    <strong style="text-decoration: underline ">Clique aqui</strong></span>
+                            </p>
+                        </ion-row>
+
+
+                    </form>
+
+                </div>
+
+                <!--   formulario de cadastro de senha -->
+
+                <div *ngIf="registrar">
+
+                    <!-- Login form -->
+                    <form [formGroup]="frmLoginCadastro">
+
+                        <!-- <ion-item>
+                            <ion-label position="floating "> Nome* </ion-label>
+                            <ion-input type="text " formControlName="nome" name="nome" id="nome">
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Cep*</ion-label>
+                            <ion-input type="text" maxlength="9" formControlName="cep" name="cep" id="cep">
+                            </ion-input>
+                            <ion-button fill="clear" expand="full" slot="end" (click)="getCep()">
+                                Busca Cep
+                            </ion-button>
+
+                        </ion-item>
+
+
+                        <ion-item>
+                            <ion-label position="floating "> Endereço* </ion-label>
+                            <ion-input type="text " formControlName="endereco" name="endereco" id="endereco">
+                            </ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating "> Número* </ion-label>
+                            <ion-input type="text " formControlName="numero" name="numero" id="numero">
+                            </ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating "> Complemento </ion-label>
+                            <ion-input type="text " formControlName="complemento" name="complemento" id="complemento">
+                            </ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating "> Bairro* </ion-label>
+                            <ion-input type="text" formControlName="bairro" name="bairro" id="bairro">
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating "> Cidade* </ion-label>
+                            <ion-input type="text" formControlName="cidade" name="cidade" id="cidade">
+                            </ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating "> UF* </ion-label>
+                            <ion-input type="text" maxlength="2" formControlName="uf" name="uf" id="uf">
+                            </ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating "> Celular* </ion-label>
+                            <ion-input type="cel" formControlName="celular" name="celular" id="celular">
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating "> E-mail* </ion-label>
+                            <ion-input type="email" formControlName="email" name="email" id="email">
+                            </ion-input>
+                        </ion-item> -->
+
+
+                        <ion-item>
+                            <ion-label position="floating">CNPJ ou CPF*</ion-label>
+                            <ion-input type="text" maxlength="14" minlexgth="11" formControlName="cnpjcpf" name="cnpjcpf" id="cnpjcpf">
+                            </ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating ">
+                                <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                                Informe a Senha com 6 digitos !
+                            </ion-label>
+                            <ion-input type="password" maxlength="6" formControlName="senha" name="senha" id="senha">
+                            </ion-input>
+
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label position="floating">
+                                <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                                Confirme a Senha com 6 digitos !
+                            </ion-label>
+                            <ion-input type="password" maxlength="6" formControlName="senha1" name="senha1" id="senha1">
+                            </ion-input>
+                        </ion-item>
+
+
+                    </form>
+
+                    <div class="ion-text-center align-items-center ">
+                        <ion-button class="button-center-login" fill="outline" expand="block" shape="round" [disabled]="frmLoginCadastro.invalid" (click)="cadastrarSenha()">
+                            <ion-icon name="log-in"></ion-icon>
+                            Cadastrar
+                        </ion-button>
+                    </div>
+
+                    <!-- Other links -->
+                    <div text-center margin-top>
+                        <span color="primary" tappable (click)="exibirLogin()">Acessar ?
+                            <strong>Clique aqui</strong></span>
+                    </div>
+
+                </div>
+
+
+            </ion-grid>
+
+        </ion-row>
+
+    </ion-grid>
+
+
+</ion-content>

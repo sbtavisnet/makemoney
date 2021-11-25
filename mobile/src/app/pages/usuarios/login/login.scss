@@ -1,0 +1,17 @@
+.logo {
+    display: block;
+    margin: auto;
+    margin-top: -20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.button-center-login {
+    position: relative;
+    // top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+}

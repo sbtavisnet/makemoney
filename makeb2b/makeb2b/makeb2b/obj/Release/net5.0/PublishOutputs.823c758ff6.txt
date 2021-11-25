@@ -1,0 +1,12 @@
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\makeb2b.exe
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\appsettings.json
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\makeb2b.dll
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\makeb2b.deps.json
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\makeb2b.runtimeconfig.json
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\makeb2b.pdb
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\dev\makemoney\makeb2b\makeb2b\makeb2b\obj\Release\net5.0\PubTmp\Out\makeb2b.xml

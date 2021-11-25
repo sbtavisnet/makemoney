@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+table {
+    width: 100%;
+}
+
+.header {}
+
+.text-align-center {
+    text-align: center !important;
+}
+
+mat-form-field {
+    font-size: 16px;
+    width: 100vh;
+}
+
+mat-card-header {
+    text-align: center !important;
+}
+
+mat-card-header,
+mat-card-title {
+    text-align: center !important;
+}
+
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.button_right {
+    top: 15px;
+    right: 10px;
+    float: right;
+}
+
+
+/* Inicio Formularicom CARD  */
+
+.full-width {
+    width: 100%;
+}
+
+.shipping-card {
+    min-width: 120px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mat-radio-button {
+    display: block;
+    margin: 5px 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+
+/* Fim Formularicom CARD  */
+
+
+/* Inicio mensagens */
+
+.msg-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.msg-error {
+    background-color: #e35e6b;
+    color: #fff;
+}
+
+.edit {
+    margin-right: 10px;
+}
+
+.edit>i {
+    color: #683DB5;
+}
+
+.delete>i {
+    color: red;
+}
+
+.button_right {
+    top: 15px;
+    right: 10px;
+    float: right;
+}

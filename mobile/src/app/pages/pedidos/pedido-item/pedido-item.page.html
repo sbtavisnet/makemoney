@@ -1,0 +1,78 @@
+<ion-header>
+    <app-toobar titulo="Item" class="ion-text-center"></app-toobar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content class="ion-justify-content-center">
+            <ion-row>
+                <ion-img class="image" src=" {{ dadosProduto?.imageurl }} ">
+                </ion-img>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label>{{ dadosProduto.codpro }} </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label class="ion-text-wrap">{{ dadosProduto.despro }} </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-label color="primary"> Escolha a quantidade desejada ! </ion-label>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="3" class="ion-align-self-start">
+                    <ion-button class="ion-text-center" size="small" shape="round" fill="outline" (click)="decrementa( dadosProduto )">
+                        <ion-icon name="remove"></ion-icon>
+                    </ion-button>
+                </ion-col>
+
+                <ion-col size="6" class="ion-align-self-center">
+                    <ion-label class="font-bold quantidade-label">
+                        {{ quantidade }} {{ dadosProduto?.coduni }} </ion-label>
+                </ion-col>
+
+
+                <ion-col size="3" class="ion-align-self-end">
+                    <ion-button class="ion-text-center" size="small" shape="round" fill="outline" (click)="incrementa( dadosProduto )">
+                        <ion-icon name="add"></ion-icon>
+                    </ion-button>
+                </ion-col>
+
+
+            </ion-row>
+
+            <ion-row></ion-row>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
+
+<ion-footer class="ion-padding">
+    <ion-grid>
+        <ion-row>
+            <p class="font-30 opacidade-05 ion-margin-start"> Valor Total: {{ totalItem | currency: 'R$ ' }} </p>
+        </ion-row>
+
+        <ion-row class="button-center">
+            <ion-button shape="round" fill="outline" (click)="saveItem( dadosProduto ) ">
+                Confirma
+            </ion-button>
+
+        </ion-row>
+
+        <br><br>
+
+    </ion-grid>
+
+
+</ion-footer>

@@ -1,0 +1,29 @@
+// {
+//     "/mymarkets/*": {
+//         "target": "http://tswbike.ddns.net:8086",
+//         "secure": false,
+//         "changeOrigin": true,
+//         "logLevel": "debug"
+
+//     }
+// }
+
+
+// [{
+//         "context": "/makesales",
+//         "target": "http://tswbike.ddns.net:8086",
+//         "pathRewrite": {
+//             "^/makeslaes": ""
+//         }
+
+//     },
+//     {
+//         "context": "/avisnetapi",
+//         "target": "http://tswbike.ddns.net:8086",
+//         "pathRewrite": {
+//             "^/avisnetapi": ""
+//         }
+
+
+//     }
+// ]

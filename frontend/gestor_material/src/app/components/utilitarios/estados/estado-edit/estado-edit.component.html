@@ -1,0 +1,61 @@
+<form [formGroup]="frmFormulario" novalidate (ngSubmit)="onSubmit(frmFormulario.value)">
+    <mat-card class="shipping-card">
+
+        <mat-card-header>
+            <mat-card-title class="ce"> Estado </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>UF*</mat-label>
+                        <input matInput placeholder="UF" formControlName="uf" maxlength='2' readonly>
+                        <mat-error *ngIf="frmFormulario.controls['uf'].hasError('required')">
+                            UF <strong>Obrigatório</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>Descrição*</mat-label>
+                        <input matInput placeholder="Descrição" formControlName="descricao" readonly>
+
+                        <mat-error *ngIf="frmFormulario.controls['descricao'].hasError('required')">
+                            Descrição <strong>Obrigatório</strong>
+
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy" class="full-width">
+                        <mat-label>IBGE*</mat-label>
+                        <input matInput placeholder="IBGE" formControlName="codigoIbge" maxlength="2" readonly>
+                        <mat-error *ngIf="frmFormulario.controls['codigoIbge'].hasError('required')">
+                            IBGE <strong>Obrigatório</strong>
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" [disabled]="frmFormulario.invalid">Enviar</button>
+        </mat-card-actions>
+
+    </mat-card>
+
+
+</form>

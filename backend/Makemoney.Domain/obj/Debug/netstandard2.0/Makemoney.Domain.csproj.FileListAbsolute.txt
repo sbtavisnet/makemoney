@@ -1,0 +1,7 @@
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netstandard2.0\Makemoney.Domain.deps.json
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netstandard2.0\Makemoney.Domain.dll
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netstandard2.0\Makemoney.Domain.pdb
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netstandard2.0\Makemoney.Domain.AssemblyInfoInputs.cache
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netstandard2.0\Makemoney.Domain.AssemblyInfo.cs
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netstandard2.0\Makemoney.Domain.dll
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netstandard2.0\Makemoney.Domain.pdb

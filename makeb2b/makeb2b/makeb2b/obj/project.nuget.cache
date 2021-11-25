@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "cwTIxf4ALxi6ybg+DHA4zA5fv0B+BBq41cDLVKUuezDeVFclVXexsBV6WIoJQ1z80WO41P6MFnGz7VVwmiA9gw==",
+  "success": true,
+  "projectFilePath": "D:\\dev\\makemoney\\makeb2b\\makeb2b\\makeb2b\\makeb2b.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SBT\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\SBT\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\SBT\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\SBT\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\SBT\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\SBT\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

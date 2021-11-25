@@ -1,0 +1,28 @@
+<mat-card class="shipping-card">
+    <mat-card-title>Excluir SubGrupo</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Id" [value]="subgrupo.id" name="id" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Código" [value]="subgrupo.codigo" name="codigo" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [value]="subgrupo.descricao" name="descricao" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Ativo" [value]="subgrupo.ativo" name="ativo" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="delete()" color="warn">
+    Excluir
+  </button>
+
+    <button mat-raised-button (click)="cancel()" color="primary">
+    Cancelar
+  </button>
+
+
+</mat-card>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>makeb2b</name>
+    </assembly>
+    <members>
+        <member name="M:makeb2b.Controllers.AvisnetController.Avisnet">
+            <summary>
+            Dados da empresa.
+            </summary>
+        </member>
+        <member name="M:makeb2b.Controllers.ClienteController.GetClienteLogin(System.String,makeb2b.DTO.LoginDTO)">
+            <summary>
+               Login do cliente.
+            </summary>
+            
+             <remarks>
+               Exemplo:
+                  {
+                    "psw" : "sua senha aqui"
+                  }
+             </remarks>
+        </member>
+    </members>
+</doc>

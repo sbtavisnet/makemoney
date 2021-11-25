@@ -1,0 +1,75 @@
+<ion-header>
+    <app-menu-header titulo="Produtos"></app-menu-header>
+
+    <ion-searchbar (ionInput)="getProdutos($event)" placeholder="Descrição do produto..."> </ion-searchbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let item of listaprodutos" col-12 col-md-6 col-lg-4 col-xl-3>
+                <ion-card class="ion-card-configurado">
+                    <ion-card-content>
+                        <ion-row>
+                            <ion-img class="image" src="{{ item?.imageurl }}">
+                            </ion-img>
+                        </ion-row>
+
+
+                        <ion-row>
+                            <ion-label>
+                                {{ item.codpro }}
+                            </ion-label>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-label class=" ion-text-wrap ">
+                                {{ item.despro.substring(0,30) }}
+                            </ion-label>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-label>
+                                R$ {{ item.venda | number: '2.2' }} {{ item.coduni }}
+                            </ion-label>
+
+                        </ion-row>
+
+                        <!-- <ion-row>
+                            <ion-col>
+                                <ion-button shape="round" fill="outline" (click)="showFormulario(item)" float>
+                                    <ion-icon name="cart"></ion-icon>
+                                    <strong>Comprar</strong>
+                                </ion-button>
+                            </ion-col>
+                        </ion-row> -->
+
+
+                        <ion-footer class="ion-no-border">
+                            <ion-row>
+                                <ion-col>
+                                    <ion-button shape="round" fill="outline" (click)="showFormulario(item)" float>
+                                        <ion-icon name="cart"></ion-icon>
+                                        <strong>Comprar</strong>
+                                    </ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-footer>
+
+                    </ion-card-content>
+
+
+                </ion-card>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-infinite-scroll (ionInfinite)=" popularInfinite($event) ">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+
+</ion-content>

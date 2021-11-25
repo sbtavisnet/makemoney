@@ -1,0 +1,137 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+:root {
+    // --ion-color-primary: #00ff00;
+}
+
+* {
+    font-family: 'Humanst' !important;
+}
+
+.menu-margem-left {
+    margin-left: 10px;
+}
+
+.card {
+    color: #669900;
+}
+
+.text-primary {
+    color: #669900;
+}
+
+.text-secondary {
+    color: color(#ffa500);
+}
+
+// Animate CSS
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.login-content {
+    width: auto;
+    //.logo {
+    //     background-position: center;
+    //     /* Center the image */
+    //     background-repeat: no-repeat;
+    //     /* Do not repeat the image */
+    //     background-size: cover;
+    //     /* Resize the background image to cover the entire container */
+    //     height: 60px;
+    //     width: 60px;
+    //     background-image: url('../src/assets/img/logo.png');
+    //     //--background: url('../src/assets/img/logo.png')
+    //}
+}
+
+.auth-page {
+    background-color: #6A5ACD;
+}
+
+.item-label {
+    font-size: 13px;
+}
+
+.red {
+    background-color: #fff;
+    color: red;
+}
+
+.blue {
+    background-color: #fff;
+    color: blue;
+}
+
+.button-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrinho-vazio {
+    width: 100%;
+    height: 100%;
+    --background: url("../src/assets/img/carrinho-vazio.jpg") no-repeat center center transparent !important;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.cor-red {
+    color: red;
+}
+
+ion-card {
+    ion-content {
+        --ion-background-color: #fff;
+        font-family: 'Humanst' !important;
+    }
+    border: none!important;
+}
+
+.ion-card-configurado {
+    height: 280px;
+    width: 280px; // 95%;
+    --background: #fff;
+    font-family: 'Humanst' !important;
+    font-size: small;
+    ion-item:hover {
+        --background: #caf0f8;
+    }
+}
+
+.image {
+    display: block;
+    width: 80%;
+    height: 80px;
+    margin: center;
+    border: 0px !important;
+}
+
+.ion-footer {
+    position: relative;
+}
+
+.font-bold {
+    font-weight: bold;
+}

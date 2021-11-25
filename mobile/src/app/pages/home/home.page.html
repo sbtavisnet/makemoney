@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end" routerLink="/carrinho">
+            <ion-icon name="cart"></ion-icon>
+            <div *ngIf="qteItensCarrinho > 0">
+                <ion-badge>
+                    {{qteItensCarrinho }} </ion-badge>
+            </div>
+        </ion-buttons>
+
+        <ion-title class="ion-text-center">
+            Home
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen class="img-ion-content">
+
+    <img src="../../assets/img/logo_320x500.png" alt="Logomarca da empresa" class="logo">
+
+    <ion-tabs>
+
+        <ion-tab-bar slot="bottom">
+            <ion-tab-button routerLink="/grupos">
+                <ion-icon name="card"></ion-icon>
+                <ion-label>Categoria</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button routerLink="/produto">
+                <ion-icon name="barcode"></ion-icon>
+                <ion-label>Produto</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button routerLink="/carrinho" *ngIf="qteItensCarrinho>0">
+                <ion-badge color="danger"> {{qteItensCarrinho }} </ion-badge>
+                <ion-icon name="cart"></ion-icon>
+                <ion-label>Carrinho</ion-label>
+            </ion-tab-button>
+            <ion-tab-button routerLink="/carrinho" *ngIf="qteItensCarrinho===0">
+                <ion-icon name="cart"></ion-icon>
+                <ion-label>Carrinho</ion-label>
+            </ion-tab-button>
+
+
+        </ion-tab-bar>
+
+
+    </ion-tabs>
+
+</ion-content>

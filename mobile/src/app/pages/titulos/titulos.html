@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            Títulos
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="listaTitulos !== null">
+        <ion-list *ngFor="let item of listaTitulos">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="6">
+                        Título
+                    </ion-col>
+                    <ion-col size="6">
+                        {{ item?.documento }}
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="6">
+                        Parcela
+                    </ion-col>
+                    <ion-col size="6">
+                        {{ item?.parcela }}
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="6">
+                        Vencimento
+                    </ion-col>
+                    <ion-col size="4">
+                        {{ item?.vencimento | date: 'dd/MM/yyyy' }}
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="6">
+                        Valor
+                    </ion-col>
+                    <ion-col size="4">
+                        <div *ngIf="!isVencido(item?.vencimento)">
+                            <ion-text class="blue" font-size="20px">
+                                {{ item?.valor | number: '2.2' }}
+                            </ion-text>
+                        </div>
+                        <div *ngIf="isVencido(item?.vencimento)">
+                            <ion-text class="red" font-size="20px">
+                                {{ item?.valor | number: '2.2' }}
+                            </ion-text>
+                        </div>
+
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col *ngIf="item?.linhadigitavel !==null">
+                        <ion-button class="text-cap" fill="clear" (click)="copiaLinhaDigitavel(item?.linhadigitavel)">
+                            Copiar código
+                        </ion-button>
+                    </ion-col>
+
+                    <ion-col *ngIf="item?.numboleta !== null">
+                        <ion-button class="text-cap" fill="clear" (click)="boletoPorEmail(item?.codemp, item?.id)">
+                            Enviar por E-mail
+                        </ion-button>
+                    </ion-col>
+
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+            </ion-grid>
+        </ion-list>
+    </div>
+</ion-content>
+
+<div *ngIf="titulosQte > 0">
+    <ion-footer>
+        <ion-toolbar>
+            <b>
+                <h4>
+                    <p>Titulos: {{ titulosQte }}</p>
+                    <p *ngIf="titulosEmAtraso > 0">
+                        Em atraso:
+                        <ion-text class="red">
+                            {{ titulosEmAtraso | number: '2.2' }}
+                        </ion-text>
+                    </p>
+                    <p>
+                        Total : {{ titulosValor | number: '2.2' }}
+                    </p>
+                </h4>
+            </b>
+        </ion-toolbar>
+    </ion-footer>
+</div>

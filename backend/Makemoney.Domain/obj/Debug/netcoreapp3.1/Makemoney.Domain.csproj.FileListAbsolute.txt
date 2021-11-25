@@ -1,0 +1,12 @@
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netcoreapp3.1\Makemoney.Domain.deps.json
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netcoreapp3.1\Makemoney.Domain.dll
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netcoreapp3.1\Makemoney.Domain.pdb
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netcoreapp3.1\Makemoney.Domain.Shared.dll
+D:\dev\makemoney\backend\Makemoney.Domain\bin\Debug\netcoreapp3.1\Makemoney.Domain.Shared.pdb
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netcoreapp3.1\Makemoney.Domain.csprojAssemblyReference.cache
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netcoreapp3.1\Makemoney.Domain.AssemblyInfoInputs.cache
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netcoreapp3.1\Makemoney.Domain.AssemblyInfo.cs
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netcoreapp3.1\Makemoney.Domain.csproj.CoreCompileInputs.cache
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netcoreapp3.1\Makemoney.Domain.csproj.CopyComplete
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netcoreapp3.1\Makemoney.Domain.dll
+D:\dev\makemoney\backend\Makemoney.Domain\obj\Debug\netcoreapp3.1\Makemoney.Domain.pdb

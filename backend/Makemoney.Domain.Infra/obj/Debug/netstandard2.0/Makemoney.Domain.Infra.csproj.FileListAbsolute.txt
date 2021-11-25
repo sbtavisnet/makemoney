@@ -1,0 +1,11 @@
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netstandard2.0\Makemoney.Domain.Infra.deps.json
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netstandard2.0\Makemoney.Domain.Infra.dll
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netstandard2.0\Makemoney.Domain.Infra.pdb
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netstandard2.0\Makemoney.Domain.dll
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\bin\Debug\netstandard2.0\Makemoney.Domain.pdb
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netstandard2.0\Makemoney.Domain.Infra.csprojAssemblyReference.cache
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netstandard2.0\Makemoney.Domain.Infra.AssemblyInfoInputs.cache
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netstandard2.0\Makemoney.Domain.Infra.AssemblyInfo.cs
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netstandard2.0\Makemoney.Domain.Infra.csproj.CopyComplete
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netstandard2.0\Makemoney.Domain.Infra.dll
+D:\dev\makemoney\backend\Makemoney.Domain.Infra\obj\Debug\netstandard2.0\Makemoney.Domain.Infra.pdb

@@ -1,0 +1,7 @@
+{
+  "name": "mymarkets",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
